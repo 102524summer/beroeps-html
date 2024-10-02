@@ -48,7 +48,9 @@ p {
 
 
 
- 
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -56,13 +58,10 @@ p {
 }
  
 body {
+    height: 100%; 
+    margin: 0;
     font-family: 'Lilita One', sans-serif;
     background-color: #f5a9d0;
-}
- 
-.container {
-    text-align: center;
-    padding: 20px;
 }
  
 .logo {
@@ -81,16 +80,17 @@ body {
 }
  
 .video-container {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    -ms-transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%); 
+
 }
- 
+
 video {
-    width: 70%;
+    width: 100%; 
+    max-width: 800px; 
     border: 5px solid white;
     border-radius: 15px;
 }
@@ -122,7 +122,7 @@ body {
     color: white;
 }
  
-.container {
+.container2 {
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -169,57 +169,65 @@ p {
 
 
 
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- 
+
 body {
     font-family: 'Lilita One', sans-serif;
     background-color: #f5a9d0;
+    color: white;
 }
- 
+
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
     padding: 20px;
 }
- 
-.logo {
+
+.top-row, .bottom-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.character {
+    width: 45%; 
+    text-align: center;
+}
+
+.character img {
+    width: 100%; 
+    max-width: 250px; 
+    height: auto;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
- 
-.logo img {
-    width: 200px;
-    height: auto;
-}
- 
-.logo p {
-    font-size: 18px;
-    margin-top: 10px;
+
+.character p {
+    font-size: 16px; 
+    line-height: 1.6;
     color: white;
+    text-align: justify;
 }
- 
-.video-container {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
- 
-video {
-    width: 70%;
-    border: 5px solid white;
+
+.video-edit {
+    width: 150%;
+    margin: 30px auto;
+    display: block;
     border-radius: 15px;
 }
- 
-.naar-pg3 {
+
+.navigation {
     margin-top: 20px;
 }
- 
-.button {
+
+button {
     background-color: white;
     color: #f5a9d0;
     padding: 10px 20px;
@@ -229,8 +237,8 @@ video {
     font-size: 18px;
     margin: 5px;
 }
- 
-.button:hover {
+
+button:hover {
     background-color: #f5a9d0;
     color: white;
     transition: 0.3s;
