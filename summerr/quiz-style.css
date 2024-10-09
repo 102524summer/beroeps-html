@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Lilita One', sans-serif;
+    background-color: #f5a9d0; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff2fa; 
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    color: #333; 
+}
+
+
+h1 {
+    font-size: 48px;
+    color: #ff6bb5;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #ff6bb5;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
+}
+
+.button {
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    background-color: white;
+    color: #f5a9d0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid #f5a9d0;
+    border-radius: 25px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: #f5a9d0;
+    color: white;
+    transition: 0.3s;
+}
+
+.buttonquiz {
+    font-family: 'Lilita One', sans-serif;
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    background-color: white;
+    color: #f5a9d0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid #f5a9d0;
+    border-radius: 25px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.buttonquiz:hover {
+    font-family: 'Lilita One', sans-serif;
+    background-color: #f5a9d0;
+    color: white;
+    transition: 0.3s;
+}
+
+.question {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 18px;
+    background-color: #ffadd6; 
+    color: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease;
+}
+
+
+ul li:hover {
+    background-color: #f78bb8; 
+}
+
+
+ul li strong {
+    color: #ff6bb5;
+}
+
+
+@media (max-width: 768px) {
+    .quiz-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    ul li {
+        font-size: 16px;
+    }
+}
