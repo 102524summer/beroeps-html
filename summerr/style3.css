@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lilita One', sans-serif;
+    background-color: #f5a9d0; 
+    color: #333; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto; 
+    text-align: center;
+    padding: 40px; 
+    background-color: #ffffff; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-bottom: 30px; 
+}
+
+.character {
+    width: 250px; 
+    margin: 15px; 
+    background-color: #f5a9d0; 
+    color: white; 
+    border-radius: 10px; 
+    padding: 15px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s; 
+}
+
+.character:hover {
+    transform: scale(1.05); 
+}
+
+.character img {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.character p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    text-align: justify;
+}
+
+.video-edit {
+    width: 100%; 
+    max-width: 600px; 
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.naar-pg1 {
+    margin: 20px;
+}
+
+.button {
+    background-color: white; 
+    color: #f5a9d0; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border: 2px solid #f5a9d0; 
+    border-radius: 25px; 
+    font-size: 18px; 
+    margin: 5px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #f5a9d0; 
+    color: white; 
+}
+
+@media (max-width: 768px) {
+    .top-row, .bottom-row {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .character {
+        width: 90%; 
+    }
+}
