@@ -41,13 +41,13 @@ body {
 
 h1 {
     font-size: 36px;
-    color: #ffd5e9;
+    color: #f5a9d0;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
     font-size: 28px;
-    color: #ffd5e9;
+    color: #f5a9d0;
     margin: 20px 0;
 }
 
@@ -59,7 +59,7 @@ p {
 }
 
 .button {
-    background-color: #ffd5e9;
+    background-color: #f5a9d0;
     color: white;
     padding: 12px 25px;
     text-decoration: none;
@@ -73,7 +73,7 @@ p {
 }
 
 .button:hover {
-    background-color: #ff93c6;
+    background-color: #f5a9d0;
     transform: translateY(-3px);
 }
 
