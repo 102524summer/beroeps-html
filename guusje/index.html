@@ -3,35 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wii Sports</title>
-<link rel="stylesheet" href="style.css">
+    <title>Wii Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #dceeff;
+        }
+        
+        .header {
+            background-color: white;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header img {
+            height: 40px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-left img {
+            height: 20px;
+            margin-left: 10px;
+        }
+
+        
+        .content {
+            display: flex;
+            padding: 50px;
+            justify-content: space-between;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .button {
+            width: 500px;
+            height: 90px;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid black;
+            border-radius: 30px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 15px;
+            left: 300px;
+            transition: background-color 0.3s;
+            
+        }
+        
+            
+
+
+    </style>
 </head>
 <body>
-    <img id="handje" src="images/click-subscribe.gif" alt="images" width="50" height="60">
-    <img id="Sports" src="images/wiisports.png" alt="images" width="250" height="100">
-    <div class="container">
-        <div class="box">Wii</div>
-        <div class="box">Wii</div>
-        <div class="box">Wii</div>
-        <div class="box">Wii</div>
-        <div class="box">Wii</div>
-        <div class="box">Wii</div>
-        <div class="box">Wii</div>
-        <div class="box">Wii</div>
-        <div class="box">Wii</div>
-        <div class="box">Wii</div>
-        <div class="box">Wii</div>
-        <div class="box">Wii <div class="arrow"></div></div>
+    <div class="header">
+        <div class="header-left">
+            <img id="Sports" src="images/wiisports.png" alt="images" width="190" height="100">
+            <img id="Nintendo" src="images/Nintendo.png" alt="images" width="190" height="100">
+            
     </div>
 
-    <div class="bottom-bar">
-        <div class="circle-btn">Wii</div>
-        <div>
-            <div class="time">15:34</div>
-            <div class="date">WO 25-09</div>
-        </div>
-        <div class="mail-icon">✉️</div>
+    <div class="content">
+        <div class="buttons">
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+        <div class="preview-box"></div>
     </div>
-
 </body>
 </html>
