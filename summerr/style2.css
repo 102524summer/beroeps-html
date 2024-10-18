@@ -121,50 +121,19 @@ p {
 }
 
 
-@keyframes move-left-to-right {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(80vw); /* Adjust how far the GIF moves horizontally */
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes move-right-to-left {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-80vw); /* Adjust how far the GIF moves horizontally */
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
 .dancing-gif {
     width: 150px; 
     position: absolute;
-    top: 25%; /* Adjust this to control vertical positioning */
-    transform: translateY(-40%); /* Keeps the GIF centered vertically */
-    animation-duration: 5s; /* Adjust the duration as needed */
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite; /* Loops the animation infinitely */
+    top: 50%; 
+    transform: translateY(-50%);
 }
 
 .dancing-gif.left {
     left: 10px; 
-    width: 300px;
-    animation-name: move-left-to-right;
-    animation-duration: 12s;
+    width: 250px;
 }
-
+ 
 .dancing-gif.right { 
     right: 10px;  
-    width: 390px; 
-    animation-name: move-right-to-left;
-    animation-duration: 12s;
+    width: 340px; 
 } 
