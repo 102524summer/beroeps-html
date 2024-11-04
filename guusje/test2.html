@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wii Sports Quiz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #a0dfff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .quiz-container {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 700px;
+            text-align: center;
+            animation: fadeIn 1.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #a0dfff
+        ;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .question {
+            font-size: 1.2em;
+            color: #000000;
+            margin: 20px 0;
+        }
+
+        .options label {
+            display: block;
+            background-color: #a0dfff;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .options label:hover {
+            background-color: #60bae7;
+        }
+
+        .options input {
+            margin-right: 10px;
+        }
+
+        .btn {
+            background-color: #a0dfff;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #a0dfff
+        ;
+        }
+
+        .result {
+            font-size: 1.5em;
+            color: #a0dfff;
+            margin-top: 30px;
+            animation: popUp 0.5s ease-out;
+        }
+
+        @keyframes popUp {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        
+        body:before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #fffefd;
+            border-radius: 50%;
+            top: -100px;
+            left: -100px;
+            z-index: -1;
+            animation: move 8s infinite alternate ease-in-out;
+        }
+
+        body:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: #ffffff;
+            border-radius: 50%;
+            bottom: -50px;
+            right: -50px;
+            z-index: -1;
+            animation: move2 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes move {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(50px) translateY(50px); }
+        }
+
+        @keyframes move2 {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-50px) translateY(-50px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+
+       
+        <div class="question">
+            <p>1. Hoeveel sporten zijn er beschikbaar in de originele Wii Sports?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> 3</label>
+                <label><input type="radio" name="q1" value="b"> 5</label>
+                <label><input type="radio" name="q1" value="c"> 7</label>
+            </div>
+        </div>
+
+        <!-- Vraag 2 -->
+        <div class="question">
+            <p>2. Welke van de volgende sporten is GEEN onderdeel van Wii Sports?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> Tennis</label>
+                <label><input type="radio" name="q2" value="b"> Boksen</label>
+                <label><input type="radio" name="q2" value="c"> Voetbal</label>
+            </div>
+        </div>
+
+        <!-- Vraag 3 -->
+        <div class="question">
+            <p>3. Welke sport wordt gespeeld met een bat en een bal?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> Bowling</label>
+                <label><input type="radio" name="q3" value="b"> Honkbal</label>
+                <label><input type="radio" name="q3" value="c"> Golf</label>
+            </div>
+        </div>
+
+        <!-- Vraag 4 -->
+        <div class="question">
+            <p>4. In welke sport gebruik je een racket?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> Tennis</label>
+                <label><input type="radio" name="q4" value="b"> Boksen</label>
+                <label><input type="radio" name="q4" value="c"> Honkbal</label>
+            </div>
+        </div>
+
+        <button class="btn" onclick="checkAnswers()">Verzend</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: 'b', // 5 sporten
+                q2: 'c', // Voetbal is geen onderdeel van Wii Sports
+                q3: 'b', // Honkbal
+                q4: 'a'  // Tennis
+            };
+
+            let score = 0;
+
+            const userAnswer1 = document.querySelector('input[name="q1"]:checked');
+            const userAnswer2 = document.querySelector('input[name="q2"]:checked');
+            const userAnswer3 = document.querySelector('input[name="q3"]:checked');
+            const userAnswer4 = document.querySelector('input[name="q4"]:checked');
+
+            if (userAnswer1 && userAnswer1.value === correctAnswers.q1) score++;
+            if (userAnswer2 && userAnswer2.value === correctAnswers.q2) score++;
+            if (userAnswer3 && userAnswer3.value === correctAnswers.q3) score++;
+            if (userAnswer4 && userAnswer4.value === correctAnswers.q4) score++;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `Je hebt ${score} van de 4 vragen correct beantwoord!`;
+        }
+    </script>
+
+</body>
+</html>
