@@ -53,7 +53,7 @@ background-size: 60px 60px;
 .logo p {
     font-size: 20px;
     margin-top: 10px;
-    color: #ffd5e9;
+    color: #f5a9d0;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -65,19 +65,20 @@ background-size: 60px 60px;
     margin: 15px 0;
     width: 500; 
     height: 280px; 
+    background-color: #f5a9d0;
 }
 
 video {
     width: 80%; 
     height: 100%; 
     object-fit: cover; 
-    border: 5px solid #ffd5e9;
+    border: 5px solid #f5a9d0;
     border-radius: 15px;
 }
 
 
 .button {
-    background-color: #ffd5e9;
+    background-color: #f5a9d0;
     color: white;
     padding: 12px 25px;
     text-decoration: none;
@@ -91,7 +92,7 @@ video {
 }
 
 .button:hover {
-    background-color: #ff93c6;
+    background-color: #f5a9d0;
     transform: translateY(-3px);
 }
 
@@ -121,7 +122,6 @@ p {
 }
 
 
-
 .dancing-gif {
     width: 150px; 
     position: absolute;
@@ -131,11 +131,10 @@ p {
 
 .dancing-gif.left {
     left: 10px; 
-    width: 200px;
+    width: 250px;
 }
-
-.dancing-gif.right {
-    right: 10px; 
-    width: 300px;
-}
-
+ 
+.dancing-gif.right { 
+    right: 10px;  
+    width: 340px; 
+} 

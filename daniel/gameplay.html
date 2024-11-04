@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gameplay</title>
+    <link rel="stylesheet" href="gameplay.css"> 
+
+</head>
+<body>
+
+    <!-- Background video looping -->
+    <video autoplay muted loop id="background-video">
+        <source src="videos/Left 4 Dead 2 Trailer Cinematic Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- gameplay section -->
+    <div class="character-select-container">
+        <h1 style="color: white;">Gameplay</h1>
+
+        <!-- Versus -->
+        <div class="character" onclick="selectCharacter('Gamemodes')">
+            <img src="images/Versus_icon.webp" alt="Character 1">
+            <div class="character-name">Gamemodes</div>
+        <p> fight your friends, increase the difficulty, play community maps gamemode has it all</p>
+        </div>
+
+        <!-- Scavange -->
+        <div class="character" onclick="selectCharacter('Character 2')">
+            <img src="images/Scavenge_icon.webp" alt="Character 2">
+            <div class="character-name">Loot & Shoot</div>
+            <p> shoot, loot and survive against the challanges ahead of you</p>
+        </div>
+ <!-- Fend off zombies -->
+ <div class="character" onclick="selectCharacter('Character 2')">
+    <img src="images/Realism_icon.webp" alt="Character 2">
+    <div class="character-name">Fend off infected</div>
+    <p> fend off against various infected whilst completing objectives</p>
+    <a href="index.html">quit</a>
+</div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

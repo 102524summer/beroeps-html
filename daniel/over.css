@@ -1,0 +1,29 @@
+
+/* Background Video */
+video#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    /* Ensures it stays behind other elements :D */
+}
+#text-under {
+    display: block;
+    border: 0px solid #000000;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.604), rgba(69, 65, 65, 0));
+    width: 100vw;
+    height: 100px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    line-height: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+}
+#text-under {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    top: 34%
+}

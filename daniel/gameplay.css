@@ -1,0 +1,83 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background video styling */
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+p {
+    color: white;
+}
+video#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensures it stays behind other elements :D */
+}
+a {
+    color: rgb(255, 255, 255, 0.5);
+    text-decoration: underline;
+font-size: xx-large;
+}
+/* Character selection container */
+.character-select-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px; /* Fixed width for the sidebar */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+/* Individual character styling */
+/* zet bg color ; niet in */
+.character {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 140px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.character:hover {
+    transform: scale(1.1);
+}
+
+.character img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 10px;
+    scale: 50px;
+}
+
+.character-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.select-button {
+    background-color: #00b300;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
