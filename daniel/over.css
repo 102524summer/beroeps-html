@@ -10,20 +10,23 @@ video#background-video {
     /* Ensures it stays behind other elements :D */
 }
 #text-under {
+    position: absolute;
+    left: 0px;
+}
+#text-under {
     display: block;
     border: 0px solid #000000;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.604), rgba(69, 65, 65, 0));
-    width: 100vw;
-    height: 100px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.604), rgba(5, 2, 2, 0.079));
+    width: 400px;
+    height: 100vh;
     padding: 10px;
     color: rgb(255, 255, 255);
     line-height: 10px;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    margin-top: 30px;
+    margin-top: 0px;
 }
-#text-under {
-    position: absolute;
-    left: 40px;
-    top: 40px;
-    top: 34%
+a {
+font-size: xx-large;
+color: white;
+text-decoration: underline color(srgb rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0));
 }
